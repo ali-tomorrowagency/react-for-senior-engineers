@@ -1,0 +1,31 @@
+/**
+ *
+ * Usage:
+ *
+ *  .className {
+ *    ...
+ *    @include tablet {
+ *      ...
+ *    }
+ *  }
+ *
+ *
+ */
+
+@mixin tablet {
+  @media(min-width: map-get($brekpoints, 'md')) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media(min-width: map-get($brekpoints, 'lg')) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media(min-width: map-get($brekpoints, 'xl')) {
+    @content;
+  }
+}
